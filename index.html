@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="index.css">
+</head>
+<body>
+   <center> <div id="card"> 
+    <div id="message"></div> 
+   <div id="clock">00:00:00</div>
+   </center>
+   <div id="message"></div>
+   <audio id="tickSound" src="slow-cinematic-clock-ticking-357979.mp3" preload="auto"></audio>
+   <audio id="Sound" src="alarm-327234.mp3" preload="auto"></audio>
+    </div>
+</body>
+<script src="indedx.js"></script>
+<script>
+  const tick = document.getElementById("tickSound");
+
+  setInterval(() => {
+    tick.currentTime = 0;
+    tick.play();
+  }, 1000); 
+</script>
+<script>
+  const ticke = document.getElementById("minSound");
+  setInterval(() => {
+    minuteSound.currentTime = 0;
+    minuteSound.play().catch(err => {
+      console.log("Play blocked until user interacts with the page");
+    });
+  }, 60000); 
+</script>
+
+</html> 
+
